@@ -1,0 +1,9 @@
+{
+  "name": "todo-gitflow",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node -e \"import('./src/todo.js').then(m=>console.log(m.formatTask(m.createTask('demo'))))\"",
+    "test": "node -e \"import('./src/todo.js').then(m=>{const t=m.createTask('demo'); if(m.formatTask(t)!=='1: demo') {throw new Error('test failed')}})\""
+  }
+}
