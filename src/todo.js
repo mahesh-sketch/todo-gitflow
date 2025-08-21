@@ -12,5 +12,6 @@ export function createTask(title) {
 
 export function formatTask(t) {
   // We'll intentionally edit this line in multiple branches to create conflicts later.
-  return t.dueDate ? `${t.id}: ${t.title} (due ${t.dueDate})` : `${t.id}: ${t.title}`;
-}
+   const title = String(t.title).toUpperCase();
+   return t.dueDate ? `${t.id}: ${title} (due ${t.dueDate})` : `${t.id}: ${title}`;
+ }
