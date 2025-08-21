@@ -7,10 +7,10 @@ export function createTask(title) {
   }
   const trimmed = title.trim();
   if (trimmed.length === 0) throw new Error("title cannot be empty");
-  return { id: 1, title: trimmed };
+  return { id: 1, title: trimmed, dueDate: null };
 }
 
 export function formatTask(t) {
   // We'll intentionally edit this line in multiple branches to create conflicts later.
-  return `${t.id}: ${t.title}`;
+  return t.dueDate ? `${t.id}: ${t.title} (due ${t.dueDate})` : `${t.id}: ${t.title}`;
 }
